@@ -3,8 +3,15 @@
   let canvasRef: HTMLCanvasElement;
 
   onMount(() => {
-
-  })
+    if (canvasRef) {
+      const ctx = canvasRef.getContext('2d');
+      if (ctx) {
+        ctx.fillStyle = 'lightblue';
+        console.log("canvasRef.width, canvasRef.height: ", canvasRef.width, ", ", canvasRef.height)
+        ctx.fillRect(0, 0, canvasRef.width, canvasRef.height);
+      }
+    }
+  });
 </script>
 
 <div class="flex-grow m-3 overflow-hidden" style="width: 100%; height: 100%;">
@@ -12,13 +19,4 @@
 </div>
 
 <style>
-  .flex-grow {
-    flex-grow: 1;
-  }
-  .m-3 {
-    margin: 1rem;
-  }
-  .overflow-hidden {
-    overflow: hidden;
-  }
 </style>

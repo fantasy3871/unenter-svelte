@@ -2,7 +2,7 @@
   import NoiseMap from "./NoiseMap.svelte";
 </script>
 
-<div>
+<div class="flex flex-col h-screen min-w-96">
   <NoiseMap />
 </div>
 
