@@ -585,3 +585,7 @@ video {
 .overflow-hidden {
   overflow: hidden;
 }
+
+.p-3 {
+  padding: 0.75rem;
+}
